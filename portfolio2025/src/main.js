@@ -1,5 +1,6 @@
 import { scaleFactor } from "./constants";
 import { k } from "./kaboomCtx";
+import { displayDialogue } from "./utils";
 
 k.loadSprite("spritesheet.png", "./spritesheet.png", {
     sliceX: 39,
@@ -61,7 +62,7 @@ k.scene("main", async () => {
             if (boundary.name) {
                 player.onCollide(boundary.name, () => {
                     player.isInDialogue = true;
-                    // Things I have to do
+                    displayDialogue("test", () => player.isInDialogue = false);
                 })
             }
 
