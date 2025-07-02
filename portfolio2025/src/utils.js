@@ -30,3 +30,7 @@ export function displayDialogue(text, onDisplayEnd) {
 
     closeBtn.addEventListener("click", onCloseBtnClick)
 }
+
+export function cameraScale(k) {
+    
+}

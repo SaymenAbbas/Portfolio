@@ -19,7 +19,23 @@ k.loadSprite("spritesheet", "./spritesheet.png", {
 
 k.loadSprite("map", "./map.png")
 
-k.setBackground(k.Color.fromHex("#191919"));
+// k.setBackground(k.Color.fromHex("#191919"));
+
+const grassTileIndex = 40;
+const tileSize = 16;
+const tileX = Math.ceil(k.width() / (tileSize * scaleFactor));
+const tileY = Math.ceil(k.height() / (tileSize * scaleFactor));
+
+for (let x = 0; x < tileX; x++) {
+    for (let y = 0; y < tileY; y++) {
+        k.add([
+            k.sprite("spritesheet", {frame: grassTileIndex}),
+            k.pos(x * tileSize * scaleFactor, y * tileSize * scaleFactor),
+            k.scale(scaleFactor),
+            "bg-tile"
+        ]);
+    }
+}
 
 // get map.json file with async (fetch call)
 k.scene("main", async () => {
@@ -41,7 +57,7 @@ k.scene("main", async () => {
         k.pos(),
         k.scale(scaleFactor),
         {
-            speed: 25,
+            speed: 250,
             direction: "down",
             isInDialogue: false,
         },
@@ -83,13 +99,16 @@ k.scene("main", async () => {
       }
     }
 
-
-
     k.onUpdate(() => {
         k.camPos(player.pos.x, player.pos.y + 100);
     })
 
-    
+    k.onMouseDown((mouseBtn) => {
+        if(mouseBtn !== "left" || player.isInDialogue) return;
+
+        const worldMousePos = k.toWorld(k.mousePos());
+        player.moveTo(worldMousePos, player.speed);
+    })
 
 });
 
