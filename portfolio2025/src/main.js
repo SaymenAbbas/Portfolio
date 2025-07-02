@@ -1,6 +1,6 @@
 import { scaleFactor } from "./constants";
 import { k } from "./kaboomCtx";
-import { displayDialogue } from "./utils";
+import { cameraScale, displayDialogue } from "./utils";
 
 k.loadSprite("spritesheet", "./spritesheet.png", {
     sliceX: 39,
@@ -19,7 +19,7 @@ k.loadSprite("spritesheet", "./spritesheet.png", {
 
 k.loadSprite("map", "./map.png")
 
-// k.setBackground(k.Color.fromHex("#191919"));
+k.setBackground(k.Color.fromHex("#191919"));
 
 const grassTileIndex = 40;
 const tileSize = 16;
@@ -37,8 +37,13 @@ for (let x = 0; x < tileX; x++) {
     }
 }
 
+k.loadSound("npc-voice", "./audio/video-games-speak-358238.mp3");
+k.loadSound("bg-music", "./audio/tokyo-glow-285247.mp3");
+
 // get map.json file with async (fetch call)
 k.scene("main", async () => {
+    k.play("bg-music", {loop: true, volume: 0.2});
+    
     // await; finishes the codeline first, then continues
     const mapData = await (await fetch("./map.json")).json()
     const layers = mapData.layers
@@ -78,7 +83,7 @@ k.scene("main", async () => {
             if (boundary.name) {
                 player.onCollide(boundary.name, () => {
                     player.isInDialogue = true;
-                    displayDialogue("test", () => player.isInDialogue = false);
+                    displayDialogue(k, "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere architecto quasi, voluptate, voluptates neque laborum in, soluta omnis saepe dignissimos reprehenderit ea officiis. Ipsum, dolorum magnam nulla enim at fuga", () => player.isInDialogue = false);
                 })
             }
 
@@ -99,6 +104,12 @@ k.scene("main", async () => {
       }
     }
 
+    cameraScale(k);
+
+    k.onResize(() => {
+        cameraScale(k);
+    })
+
     k.onUpdate(() => {
         k.camPos(player.pos.x, player.pos.y + 100);
     })
@@ -108,6 +119,8 @@ k.scene("main", async () => {
 
         const worldMousePos = k.toWorld(k.mousePos());
         player.moveTo(worldMousePos, player.speed);
+
+        
     })
 
 });
