@@ -1,4 +1,4 @@
-import { scaleFactor } from "./constants";
+import { dialogueData, scaleFactor } from "./constants";
 import { k } from "./kaboomCtx";
 import { cameraScale, displayDialogue } from "./utils";
 
@@ -44,6 +44,17 @@ k.loadSound("bg-music", "./audio/tokyo-glow-285247.mp3");
 k.scene("main", async () => {
     k.play("bg-music", {loop: true, volume: 0.2});
     
+    if (k.audioCtx.state === "suspended") {
+        const resumeAudio = () => {
+            k.audioCtx.resume();
+            window.removeEventListener("click", resumeAudio);
+            window.removeEventListener("keydown", resumeAudio);
+        }
+        window.addEventListener("click", resumeAudio);
+        window.addEventListener("keydown", resumeAudio);
+    }
+    
+
     // await; finishes the codeline first, then continues
     const mapData = await (await fetch("./map.json")).json()
     const layers = mapData.layers
@@ -83,7 +94,7 @@ k.scene("main", async () => {
             if (boundary.name) {
                 player.onCollide(boundary.name, () => {
                     player.isInDialogue = true;
-                    displayDialogue(k, "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere architecto quasi, voluptate, voluptates neque laborum in, soluta omnis saepe dignissimos reprehenderit ea officiis. Ipsum, dolorum magnam nulla enim at fuga", () => player.isInDialogue = false);
+                    displayDialogue(k, dialogueData[boundary.name], () => player.isInDialogue = false);
                 })
             }
 
@@ -120,7 +131,7 @@ k.scene("main", async () => {
         const worldMousePos = k.toWorld(k.mousePos());
         player.moveTo(worldMousePos, player.speed);
 
-        
+
     })
 
 });
