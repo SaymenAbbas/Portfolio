@@ -37,9 +37,9 @@ for (let x = 0; x < tileX; x++) {
     }
 }
 
-k.loadSound("npc-voice", "./audio/video-games-speak-358238.mp3");
-k.loadSound("bg-music", "./audio/tokyo-glow-285247.mp3");
-k.loadSound("player-footsteps", "./audio/walking-on-wood-363349.mp3");
+k.loadSound("npc-voice", "./video-games-speak-358238.mp3");
+k.loadSound("bg-music", "./tokyo-glow-285247.mp3");
+k.loadSound("player-footsteps", "./walking-on-wood-363349.mp3");
 
 // get map.json file with async (fetch call)
 k.scene("main", async () => {

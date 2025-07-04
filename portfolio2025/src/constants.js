@@ -2,73 +2,73 @@ export const scaleFactor = 4;
 
 export const dialogueData = {
   PC: 
-    "Hier arbeite ich an meinen Projekten: Schreiben von sauberem Code, automatisierten Tests und Deployment-Prozessen. " +
-    "Meine Hauptprogrammiersprachen sind JavaScript, TypeScript und Python. " +
-    "Ich entwickle Webanwendungen mit React und Node.js, baue Spiele mit Kaboom und lerne staendig neue Technologien wie Docker und Kubernetes.",
+    "This is where I work on my projects: writing clean code, automated tests, and deployment processes. " +
+    "My main programming languages are JavaScript, TypeScript, and Python. " +
+    "I build web applications with React and Node.js, create games with Kaboom, and constantly learn new technologies like Docker and Kubernetes.",
 
   shelf: 
-    "Dieses Regal symbolisiert meine stete Weiterbildung. Hier sammele ich Buecher und Ressourcen zu Algorithmen, " +
-    "Software-Architektur und modernen Entwicklungsmethoden wie Clean Code, SOLID-Prinzipien und funktionaler Programmierung. " +
-    "Ich investiere viel Zeit in Online-Kurse auf Plattformen wie Udemy und freeCodeCamp.",
+    "This shelf symbolizes my ongoing learning. I collect books and resources on algorithms, " +
+    "software architecture, and modern development methods like Clean Code, SOLID principles, and functional programming. " +
+    "I invest a lot of time in online courses on platforms like Udemy and freeCodeCamp.",
 
   information: 
-    "Meine Projektuebersicht umfasst eine breite Palette von Anwendungen: von responsiven Webapps ueber APIs bis hin zu 2D-Spielen. " +
-    "Besonders stolz bin ich auf mein Multiplayer-Spiel, das ich mit Kaboom und WebSockets realisiert habe. " +
-    "Schau dir gern mein GitHub an, um Quellcode, Dokumentation und aktuelle Projekte einzusehen: github.com/deinusername.",
+    "My project portfolio includes a wide range of applications: from responsive web apps and APIs to 2D games. " +
+    "I'm especially proud of my multiplayer game built with Kaboom and WebSockets. " +
+    "Feel free to check out my GitHub to see source code, documentation, and current projects: github.com/yourusername.",
 
   information2: 
-    "Mein Abschluss in Informatik bildet das Fundament meiner technischen Faehigkeiten und meines analytischen Denkens. " +
-    "Dort habe ich mich intensiv mit Datenstrukturen, Algorithmen, Datenbanken und Software-Engineering beschaeftigt.",
+    "My degree in Computer Science forms the foundation of my technical skills and analytical thinking. " +
+    "I focused intensively on data structures, algorithms, databases, and software engineering.",
 
   sword: 
-    "Das Schwert steht fuer meinen Ehrgeiz und die Beharrlichkeit, komplexe Programmierherausforderungen zu meistern. " +
-    "Ich gebe nicht auf, bis meine Loesungen effizient, wartbar und skalierbar sind.",
+    "The sword represents my ambition and persistence in mastering complex programming challenges. " +
+    "I don't stop until my solutions are efficient, maintainable, and scalable.",
 
   bookshelf: 
-    "Hier bewahre ich Fachbuecher zu Clean Code, Design Patterns und Best Practices auf. " +
-    "Diese Grundlagen helfen mir, wartbaren, lesbaren und robusten Code zu schreiben, der in Teams funktioniert.",
+    "Here I keep technical books on Clean Code, design patterns, and best practices. " +
+    "These principles help me write maintainable, readable, and robust code that works well in team environments.",
 
   bookshelf2: 
-    "Hier bewahre ich Fachbuecher zu Clean Code, Design Patterns und Best Practices auf. " +
-    "Diese Grundlagen helfen mir, wartbaren, lesbaren und robusten Code zu schreiben, der in Teams funktioniert.",
+    "Here I keep technical books on Clean Code, design patterns, and best practices. " +
+    "These principles help me write maintainable, readable, and robust code that works well in team environments.",
 
   openrefrigerator: 
-    "Der geoeffnete Kuehlschrank zeigt, dass ich stets gut vorbereitet bin – sowohl mit Snacks als auch mit neuen Ideen, " +
-    "um produktiv und kreativ an meinen Projekten zu arbeiten.",
+    "The open fridge shows that I’m always well-prepared – with both snacks and fresh ideas " +
+    "to work productively and creatively on my projects.",
 
   chest: 
-    "In dieser Truhe liegen meine Zertifikate, z.B. fuer Webentwicklung, Cloud-Services (AWS, Azure) und DevOps-Tools (Jenkins, GitHub Actions). " +
-    "Sie dokumentieren meinen Anspruch an professionelle und zuverlaessige Softwareentwicklung.",
+    "In this chest are my certificates, e.g. for web development, cloud services (AWS, Azure), and DevOps tools (Jenkins, GitHub Actions). " +
+    "They reflect my commitment to professional and reliable software development.",
 
   bed: 
-    "Nach langen Coding-Sessions ist Erholung wichtig. Hier tanke ich Energie, um mit frischem Kopf neue kreative Loesungen zu entwickeln.",
+    "After long coding sessions, rest is important. This is where I recharge to tackle new creative challenges with a fresh mind.",
 
   sofa: 
-    "Das Sofa ist ein entspannter Meeting- und Austauschplatz. Fuer mich sind offene Kommunikation und Zusammenarbeit wichtige Erfolgsfaktoren.",
+    "The sofa is a relaxed spot for meetings and discussions. I believe open communication and collaboration are key to success.",
 
   stool: 
-    "Ein kleiner Sitzplatz fuer kurze Gespraeche oder Brainstormings – Teamwork findet bei mir immer Raum.",
+    "A small seat for quick conversations or brainstorming – teamwork always has space in my process.",
 
   kingstool: 
-    "Der ‚Koenigsstuhl‘ symbolisiert Verantwortung bei Projektleitung und Entscheidungen in agilen Teams.",
+    "The 'king’s chair' symbolizes leadership responsibility and decision-making in agile teams.",
 
   seat: 
-    "Ein weiterer gemuetlicher Platz zum Nachdenken und Diskutieren – Innovation entsteht im Dialog.",
+    "Another cozy spot for reflection and discussion – innovation often starts with a good conversation.",
 
   seat2: 
-    "Hier entstehen oft die besten Ideen bei entspannten Gespraechen mit Kollegen.",
+    "Some of the best ideas come from relaxed talks with colleagues.",
 
   refrigerator: 
-    "Mein Vorrat an Snacks und Getraenken haelt mich waehrend intensiver Arbeitsphasen bei Laune und leistungsfaehig.",
+    "My supply of snacks and drinks keeps me energized and focused during intense work phases.",
 
   potion: 
-    "Mein kleiner ‚Zaubertrank‘ – Kaffee gibt mir den noetigen Energieschub, um auch knifflige Bugs zu loesen!",
+    "My little 'magic potion' – coffee gives me the energy boost I need to tackle tricky bugs!",
 
   key: 
-    "Der Schluessel symbolisiert meinen Zugang zu neuen Technologien und Herausforderungen. " +
-    "Ich bin offen fuer innovative Projekte und lerne gerne staendig dazu.",
+    "The key represents my access to new technologies and challenges. " +
+    "I’m always open to innovative projects and love learning new things.",
 
   door: 
-    "Danke fuer deinen Besuch in meinem Portfolio! Wenn du es verlassen moechtest, kannst du einfach das Browser-Tab schliessen. " +
-    "Ich freue mich auf deine Kontaktaufnahme.",
+    "Thanks for visiting my portfolio! If you want to leave, you can simply close the browser tab. " +
+    "I'm looking forward to hearing from you.",
 };
