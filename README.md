@@ -4,6 +4,9 @@
 </p>
 
 <p align="center">
-  <img src="portfolioGame.png" alt="Portfolio Game Screenshot">
+  <a href="https://macpr0.itch.io/portfolio-game" align="center">Here is the Live-Demo!</a>
 </p>
 
+<p align="center">
+  <img src="portfolioGame.png" alt="Portfolio Game Screenshot">
+</p>
